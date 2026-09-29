@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f6f8;
+  --surface: #ffffff;
+  --foreground: #15243b;
+  --muted: #64748b;
+  --border: #dbe3ec;
+  --brand: #00327b;
+  --brand-soft: #e7eefb;
+  --accent: #0a8ac6;
+  --danger: #b42318;
+  --ok: #067647;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+  --font-sans: var(--font-thai), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Form controls repeat on every screen; keep one definition. */
+@layer components {
+  .field {
+    @apply w-full rounded-md border border-line bg-surface px-3 py-2 text-sm
+      outline-none transition placeholder:text-muted/70
+      focus:border-brand focus:ring-2 focus:ring-brand/20
+      disabled:cursor-not-allowed disabled:bg-background;
+  }
+
+  .label {
+    @apply mb-1 block text-xs font-medium text-muted;
+  }
+
+  /* Tailwind v4 cannot @apply a custom class, so each variant repeats the base. */
+  .btn,
+  .btn-primary,
+  .btn-ghost,
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2
+      text-sm font-medium transition disabled:cursor-not-allowed
+      disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-brand text-white hover:bg-brand/90;
+  }
+
+  .btn-ghost {
+    @apply border border-line bg-surface hover:bg-brand-soft;
+  }
+
+  .btn-danger {
+    @apply border border-danger/30 bg-white text-danger hover:bg-danger/5;
+  }
+
+  .card {
+    @apply rounded-lg border border-line bg-surface;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+  }
+}

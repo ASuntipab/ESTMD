@@ -1,0 +1,7604 @@
+{
+  "source": "MD_Standard_Matrix_v3.xlsx",
+  "version": "3.0",
+  "title": "MD Estimation Standard Matrix v3.0 — มาตรฐานการประเมิน Man-Day ตามบทบาท (Role) × ระดับความซับซ้อน (L/M/H)",
+  "defaultBufferPercent": 10,
+  "roles": [
+    {
+      "code": "PM",
+      "name": "PM",
+      "seniority": "senior",
+      "ratePerMd": 14000,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": 0.15,
+      "sortOrder": 10,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "SA",
+      "name": "SA",
+      "seniority": "senior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": 0.3,
+      "sortOrder": 20,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "BA",
+      "name": "BA",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": 0.225,
+      "sortOrder": 30,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "DEV_SR",
+      "name": "Developer (Senior)",
+      "seniority": "senior",
+      "ratePerMd": 14000,
+      "stackMultiplied": true,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 40,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "DEV",
+      "name": "Developer",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": true,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 50,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "TESTER",
+      "name": "Tester",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": 0.35,
+      "sortOrder": 60,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "INFRA",
+      "name": "Infra",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 70,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "AZURE",
+      "name": "Azure",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 80,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "DEVOPS",
+      "name": "DevOps",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 90,
+      "hasMatrixColumn": true
+    },
+    {
+      "code": "SECURITY",
+      "name": "Security",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 100,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "PI",
+      "name": "PI (WSO2)",
+      "seniority": "senior",
+      "ratePerMd": 14000,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 110,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "DB",
+      "name": "DB",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 120,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "DATA_LAKE",
+      "name": "Data Lake",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 130,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "SAP_CONSULT",
+      "name": "SAP Consult",
+      "seniority": "senior",
+      "ratePerMd": 14000,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 140,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "SAP_MASTER",
+      "name": "SAP Master",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 150,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "PIS",
+      "name": "PIS",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 160,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "PTT_ZEUS",
+      "name": "PTT_ZEUS",
+      "seniority": "senior",
+      "ratePerMd": 14000,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 170,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "ABAPER",
+      "name": "ABAPer",
+      "seniority": "junior",
+      "ratePerMd": 7500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 180,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "SERVER",
+      "name": "Server",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 190,
+      "hasMatrixColumn": false
+    },
+    {
+      "code": "TC",
+      "name": "TC",
+      "seniority": "junior",
+      "ratePerMd": 8500,
+      "stackMultiplied": false,
+      "scope": "item",
+      "ratioOfDev": null,
+      "sortOrder": 200,
+      "hasMatrixColumn": false
+    }
+  ],
+  "countUnits": [
+    "ต่อหน้าจอ",
+    "ต่อ workflow",
+    "ต่อเหตุการณ์",
+    "ต่อรูปแบบไฟล์",
+    "ต่อ dashboard",
+    "ต่อรายงาน",
+    "ต่อ job",
+    "ต่อ interface",
+    "ต่อตาราง",
+    "ต่อโครงการ",
+    "ต่อ environment",
+    "ต่อโมดูล",
+    "ต่อแบบฟอร์ม",
+    "ต่อ entity",
+    "ต่อ stack",
+    "ต่อ database",
+    "ต่อ pipeline",
+    "ต่อครั้ง"
+  ],
+  "complexityLegend": [
+    {
+      "label": "L (Low)",
+      "description": "CRUD / แสดงผล / ใช้เครื่องมือสำเร็จรูป — ไม่มี business rule พิเศษ ใช้ library/pattern ที่มีอยู่แล้วได้ทันที"
+    },
+    {
+      "label": "M (Medium)",
+      "description": "workflow, business logic, การแจ้งเตือน — มี business rule 2-3 เงื่อนไข หรือต้องเชื่อมต่อระบบอื่น 1 ระบบ"
+    },
+    {
+      "label": "H (High)",
+      "description": "เชื่อมต่อระบบภายนอก, อนุมัติหลายขั้น, security-critical — business rule ซับซ้อนหลายเงื่อนไขซ้อนกัน, หลาย state/role, หรือเชื่อมหลายระบบพร้อมกัน"
+    }
+  ],
+  "activities": [
+    {
+      "code": "1.1",
+      "groupName": "CRUD",
+      "name": "List / Search /Add /Edit /Delete",
+      "unit": "MD",
+      "countUnit": "ต่อหน้าจอ",
+      "notes": null,
+      "sortOrder": 10,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2.5
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "1.2",
+      "groupName": "CRUD",
+      "name": "List / Search /Add /Edit /Delete /Import Excel",
+      "unit": "MD",
+      "countUnit": "ต่อหน้าจอ",
+      "notes": null,
+      "sortOrder": 20,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 2.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 4
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 8
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 10
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "1.3",
+      "groupName": "CRUD",
+      "name": "Add /Edit /Delete",
+      "unit": "MD",
+      "countUnit": "ต่อหน้าจอ",
+      "notes": null,
+      "sortOrder": 30,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 8
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 4
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "1.4",
+      "groupName": "CRUD",
+      "name": "WorkFlow (multi-step / conditional approval)",
+      "unit": "MD",
+      "countUnit": "ต่อ workflow",
+      "notes": null,
+      "sortOrder": 40,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "1.5",
+      "groupName": "CRUD",
+      "name": "Notification (email / in-app)",
+      "unit": "MD",
+      "countUnit": "ต่อเหตุการณ์",
+      "notes": null,
+      "sortOrder": 50,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "1.6",
+      "groupName": "CRUD",
+      "name": "Export (Excel / PDF)",
+      "unit": "MD",
+      "countUnit": "ต่อรูปแบบไฟล์",
+      "notes": null,
+      "sortOrder": 60,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "2",
+      "groupName": null,
+      "name": "Dashboard",
+      "unit": "MD",
+      "countUnit": "ต่อ dashboard",
+      "notes": null,
+      "sortOrder": 70,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 10
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "3",
+      "groupName": null,
+      "name": "Report",
+      "unit": "MD",
+      "countUnit": "ต่อรายงาน",
+      "notes": null,
+      "sortOrder": 80,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 4
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 8
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2.5
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "4",
+      "groupName": null,
+      "name": "Job / Schedule (background job)",
+      "unit": "MD",
+      "countUnit": "ต่อ job",
+      "notes": null,
+      "sortOrder": 90,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 8
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2.5
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "5.1",
+      "groupName": "Interface / Integration",
+      "name": "API Integration (RESTful)",
+      "unit": "MD",
+      "countUnit": "ต่อ interface",
+      "notes": null,
+      "sortOrder": 100,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "5.2",
+      "groupName": "Interface / Integration",
+      "name": "External Master Data Sync",
+      "unit": "MD",
+      "countUnit": "ต่อ interface",
+      "notes": null,
+      "sortOrder": 110,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "5.3",
+      "groupName": "Interface / Integration",
+      "name": "Legacy / RFC Integration",
+      "unit": "MD",
+      "countUnit": "ต่อ interface",
+      "notes": null,
+      "sortOrder": 120,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "6",
+      "groupName": null,
+      "name": "Implement / Migration (Data Prepare)",
+      "unit": "MD",
+      "countUnit": "ต่อตาราง",
+      "notes": null,
+      "sortOrder": 130,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 10
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "7",
+      "groupName": null,
+      "name": "Fixed Security Scan (remediation)",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": null,
+      "sortOrder": 140,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 4
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 6
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "8",
+      "groupName": null,
+      "name": "Init Server (Test / Setup / Connect)",
+      "unit": "MD",
+      "countUnit": "ต่อ environment",
+      "notes": null,
+      "sortOrder": 150,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "9",
+      "groupName": null,
+      "name": "Init Project Structure",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": null,
+      "sortOrder": 160,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 4
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 7
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 10
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "10.1",
+      "groupName": "Requirement & Design",
+      "name": "Get Requirement",
+      "unit": "MD",
+      "countUnit": "ต่อโมดูล",
+      "notes": null,
+      "sortOrder": 170,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 4
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "10.2",
+      "groupName": "Requirement & Design",
+      "name": "Create Business Blueprint",
+      "unit": "MD",
+      "countUnit": "ต่อโมดูล",
+      "notes": null,
+      "sortOrder": 180,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "10.3",
+      "groupName": "Requirement & Design",
+      "name": "Design Mockup",
+      "unit": "MD",
+      "countUnit": "ต่อหน้าจอ",
+      "notes": null,
+      "sortOrder": 190,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 6
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "10.4",
+      "groupName": "Requirement & Design",
+      "name": "Create Design Specification (TOR)",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": null,
+      "sortOrder": 200,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 8
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "11.1",
+      "groupName": "Testing",
+      "name": "Create Test Scenario & Test Script",
+      "unit": "MD",
+      "countUnit": "ต่อโมดูล",
+      "notes": null,
+      "sortOrder": 210,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "11.3",
+      "groupName": "Testing",
+      "name": "System Integration Test (SIT)",
+      "unit": "MD",
+      "countUnit": "ต่อโมดูล",
+      "notes": null,
+      "sortOrder": 220,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "11.4",
+      "groupName": "Testing",
+      "name": "User Acceptance Test (UAT)",
+      "unit": "MD",
+      "countUnit": "ต่อโมดูล",
+      "notes": null,
+      "sortOrder": 230,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "12.1",
+      "groupName": "Security & Access",
+      "name": "Authentication / SSO (Azure AD / B2C / PTT CAA)",
+      "unit": "MD",
+      "countUnit": "ต่อ interface",
+      "notes": "ค่าตั้งต้นอ้างอิงจาก 5.1 API Integration — เป็นการต่อ identity provider รอ validate จาก actual",
+      "sortOrder": 240,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "12.2",
+      "groupName": "Security & Access",
+      "name": "Role & Permission Management (กลุ่มผู้ใช้ / สิทธิ์ตามเมนู)",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าตั้งต้นอ้างอิงจาก 1.4 WorkFlow — มีเมทริกซ์สิทธิ์และผลกระทบข้ามหน้าจอ รอ validate จาก actual",
+      "sortOrder": 250,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "12.3",
+      "groupName": "Security & Access",
+      "name": "Audit / History Log",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าตั้งต้นอ้างอิงจาก 1.1 List / Search — หน้าจอดู log บวก hook ตอนเขียน รอ validate จาก actual",
+      "sortOrder": 260,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "12.4",
+      "groupName": "Security & Access",
+      "name": "Session Timeout / Session Policy",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R32-R33) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 270,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 4
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 4
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 4
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "13.1",
+      "groupName": "Content & Document",
+      "name": "File Upload / Attachment",
+      "unit": "MD",
+      "countUnit": "ต่อหน้าจอ",
+      "notes": "ค่าตั้งต้นอ้างอิงจาก 1.2 Add รอ validate จาก actual (ยังไม่รวม virus scan / storage แยก)",
+      "sortOrder": 280,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "13.2",
+      "groupName": "Content & Document",
+      "name": "Print Form / Document Layout",
+      "unit": "MD",
+      "countUnit": "ต่อแบบฟอร์ม",
+      "notes": "ค่าตั้งต้นอ้างอิงจาก 1.6 Export — งานจัด layout ฟอร์มพิมพ์ รอ validate จาก actual",
+      "sortOrder": 290,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "13.3",
+      "groupName": "Content & Document",
+      "name": "Email Template Management",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R37) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 300,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "14.1",
+      "groupName": "Operations",
+      "name": "Data Retention / Archive",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าตั้งต้นอ้างอิงจาก 4 Job / Schedule — ทำงานเป็น batch ตามรอบ รอ validate จาก actual",
+      "sortOrder": 310,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 8
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1.5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2.5
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "14.2",
+      "groupName": "Operations",
+      "name": "Email Log / Monitoring",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าตั้งต้นอ้างอิงจาก 1.1 List / Search รอ validate จาก actual",
+      "sortOrder": 320,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 1.5
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0.5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "14.3",
+      "groupName": "Operations",
+      "name": "Master Data Management (WorkType / Category)",
+      "unit": "MD",
+      "countUnit": "ต่อ entity",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R39-R40) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 330,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 7
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 7
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 7
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 8
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 8
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 8
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "15.1",
+      "groupName": "Deployment & Training",
+      "name": "Prepare Training Material / User Manual",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ย้ายมาจาก 11.2 ที่เคยอยู่ใต้กลุ่ม Testing โดยไม่แก้ค่า MD",
+      "sortOrder": 340,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 8
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "16.1",
+      "groupName": "Modernisation & Upgrade",
+      "name": "Backend Framework / Runtime Upgrade",
+      "unit": "MD",
+      "countUnit": "ต่อ stack",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R17) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 350,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 8
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 8
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 8
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "16.2",
+      "groupName": "Modernisation & Upgrade",
+      "name": "Frontend Framework Upgrade",
+      "unit": "MD",
+      "countUnit": "ต่อ stack",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R18) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 360,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "16.3",
+      "groupName": "Modernisation & Upgrade",
+      "name": "Database Upgrade / Migration to PaaS",
+      "unit": "MD",
+      "countUnit": "ต่อ database",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R19) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 370,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 6
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 6
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 6
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "16.4",
+      "groupName": "Modernisation & Upgrade",
+      "name": "Cloud Migration (On-Premise → Cloud)",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R20) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 380,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 6
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 6
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 6
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 12
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 12
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 12
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "16.5",
+      "groupName": "Modernisation & Upgrade",
+      "name": "Digitize Paper Form",
+      "unit": "MD",
+      "countUnit": "ต่อแบบฟอร์ม",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R81-R82) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 390,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "16.6",
+      "groupName": "Modernisation & Upgrade",
+      "name": "Email Service Migration (SMTP → MS-Graph)",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R100) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 400,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "17.1",
+      "groupName": "DevOps & Environment",
+      "name": "CI/CD Pipeline Setup",
+      "unit": "MD",
+      "countUnit": "ต่อ pipeline",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R21) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 410,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 12
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 12
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 12
+        }
+      ]
+    },
+    {
+      "code": "17.2",
+      "groupName": "DevOps & Environment",
+      "name": "DevSecOps Rule / Policy",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R22) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 420,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 28
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 28
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 28
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "17.3",
+      "groupName": "DevOps & Environment",
+      "name": "Firewall / Network Request",
+      "unit": "MD",
+      "countUnit": "ต่อ interface",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R27) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 430,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "17.4",
+      "groupName": "DevOps & Environment",
+      "name": "Production Environment Setup",
+      "unit": "MD",
+      "countUnit": "ต่อ environment",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R104) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 440,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 2
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 2
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 2
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 1
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 1
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 4
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 4
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 4
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "17.5",
+      "groupName": "DevOps & Environment",
+      "name": "Go-live Support & Sign-off",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R105) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 450,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 10
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 10
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 10
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 10
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 10
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 10
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "18.1",
+      "groupName": "Project Management",
+      "name": "Kick-off & Project Plan",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R8-R9) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 460,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 3
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 3
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 3
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "18.2",
+      "groupName": "Project Management",
+      "name": "Recurring Meeting / Progress Report",
+      "unit": "MD",
+      "countUnit": "ต่อครั้ง",
+      "notes": "แปลงจากชั่วโมง: L = ประชุม 1 ชม. / M = 2 ชม. / H = 4 ชม. (8 ชม. = 1 MD) — ไฟล์ PSM ปัด 28 ชม. ขึ้นเป็น 5 MD",
+      "sortOrder": 470,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 0.15
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 0.25
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 0.5
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "18.3",
+      "groupName": "Project Management",
+      "name": "Business Development (Proposal / Impact Analysis)",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R5-R7) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 480,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 6
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 6
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 6
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "18.4",
+      "groupName": "Project Management",
+      "name": "EA Process",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R12) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 490,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    },
+    {
+      "code": "18.5",
+      "groupName": "Project Management",
+      "name": "QA Process",
+      "unit": "MD",
+      "countUnit": "ต่อโครงการ",
+      "notes": "ค่าจาก actual PTT-PSM Platform_Manday_Estimate.xlsx (R103) — ยังไม่แยกระดับ L/M/H รอข้อมูลจากโครงการอื่น",
+      "sortOrder": 500,
+      "cells": [
+        {
+          "role": "PM",
+          "complexity": "L",
+          "manday": 5
+        },
+        {
+          "role": "PM",
+          "complexity": "M",
+          "manday": 5
+        },
+        {
+          "role": "PM",
+          "complexity": "H",
+          "manday": 5
+        },
+        {
+          "role": "SA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "SA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "BA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV_SR",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEV",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "TESTER",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "INFRA",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "AZURE",
+          "complexity": "H",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "L",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "M",
+          "manday": 0
+        },
+        {
+          "role": "DEVOPS",
+          "complexity": "H",
+          "manday": 0
+        }
+      ]
+    }
+  ],
+  "techStacks": [
+    {
+      "name": "ReactJS / AngularJS (ทีมคุ้นเคย)",
+      "multiplier": 1,
+      "note": "Baseline - ทีมมีประสบการณ์ตรง",
+      "sortOrder": 10
+    },
+    {
+      "name": "ASP.NET MVC / ASP.NET Core",
+      "multiplier": 1,
+      "note": "Baseline - เฟรมเวิร์คมาตรฐาน องค์กรใช้ประจำ",
+      "sortOrder": 20
+    },
+    {
+      "name": "Node.js Backend",
+      "multiplier": 1.05,
+      "note": "Ecosystem เปลี่ยนเร็ว ต้องตรวจ dependency เพิ่ม",
+      "sortOrder": 30
+    },
+    {
+      "name": "React Native / Mobile Hybrid",
+      "multiplier": 1.3,
+      "note": "ต้อง handle platform-specific + build/release",
+      "sortOrder": 40
+    }
+  ],
+  "modifiers": [
+    {
+      "name": "Responsive Web (เพิ่มจาก Desktop)",
+      "multiplier": 1.15,
+      "note": "เพิ่ม breakpoint / QA หลายขนาดจอ",
+      "sortOrder": 10
+    },
+    {
+      "name": "Stack ใหม่ที่ทีมไม่คุ้นเคย",
+      "multiplier": 1.4,
+      "note": "รวม learning curve และความเสี่ยง rework",
+      "sortOrder": 20
+    }
+  ]
+}

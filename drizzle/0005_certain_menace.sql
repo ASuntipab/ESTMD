@@ -1,0 +1,1 @@
+ALTER TABLE `project_activity_qty` ADD `detail` text;
