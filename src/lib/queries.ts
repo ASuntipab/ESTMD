@@ -189,7 +189,15 @@ export async function getProjectDetail(id: number) {
   const project = await getProject(id)
   if (!project) return null
 
-  const [phases, items, mandays, projectRoleRows, allRoles, allActivities] =
+  const [
+    phases,
+    items,
+    mandays,
+    projectRoleRows,
+    allRoles,
+    allActivities,
+    allMatrixCells,
+  ] =
     await Promise.all([
       db
         .select()
@@ -220,6 +228,14 @@ export async function getProjectDetail(id: number) {
         .where(eq(projectRoles.projectId, id)),
       listRoles(),
       listActivities(),
+      db
+        .select({
+          activityId: matrixCells.activityId,
+          roleId: matrixCells.roleId,
+          complexity: matrixCells.complexity,
+          manday: matrixCells.manday,
+        })
+        .from(matrixCells),
     ])
 
   const stack = project.techStackId
@@ -248,6 +264,7 @@ export async function getProjectDetail(id: number) {
     projectRoles: projectRoleRows,
     roles: allRoles,
     activities: allActivities,
+    matrixCells: allMatrixCells,
     /** The survey this project answers, and the answers themselves. */
     survey: project.questionnaireId
       ? await getQuestionnaire(project.questionnaireId)

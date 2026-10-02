@@ -12,14 +12,15 @@ import type { Summary } from './summary'
  *   row 1        project name
  *   row 2        duration, then the resource level per role column (Of1 / Sr1)
  *   rows 3-4     header: Phase | Details | Due Date Plan | Deliverables | roles
- *   rows 5..n    one row per line item, grouped and merged by phase in col A
+ *   rows 5..n    one row per estimate item, grouped and merged by phase in col A
  *   total row    SUM() per role column
  *   rate row     rate per man-day
  *   cost row     manday x rate
  *   grand total  sum of the cost row
  *
- * Plus a "Questionnaire" sheet with the survey as answered (when the project
- * used one) and a "Basis of Estimate" sheet with the assumptions.
+ * Questionnaire answers without a saved line item are included through the
+ * shared summary model. The workbook also keeps a "Questionnaire" sheet with
+ * the survey as answered and a "Basis of Estimate" sheet with assumptions.
  */
 const HEADERS = ['Phase', 'Details', 'Due Date Plan', 'Deliverables'] as const
 const FIRST_ROLE_COL = HEADERS.length + 1 // column E

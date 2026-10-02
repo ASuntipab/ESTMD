@@ -1,6 +1,12 @@
 import 'server-only'
 
-import { round2 } from './estimate'
+import {
+  buildMatrixLookup,
+  defaultItemDetail,
+  round2,
+  standardManday,
+} from './estimate'
+import { ONCE_PER_PROJECT_UNIT } from './db/schema'
 import type { ProjectDetail } from './queries'
 
 /** Roles whose man-days are the sizing basis every ratio is measured against. */
@@ -50,7 +56,8 @@ export type SummaryPhase = {
 
 /**
  * The single model behind the summary screen and the Excel export, so the
- * numbers on screen are exactly the numbers in the file.
+ * numbers on screen are exactly the numbers in the file. Positive survey
+ * answers without a saved item are represented as in-memory estimate rows.
  *
  * Item-scoped roles are added up from the keyed line items (bottom-up). Roles
  * an admin switched to phase scope are instead derived once per phase as a
@@ -130,6 +137,7 @@ export function buildSummary(detail: ProjectDetail) {
   )
 
   const activityById = new Map(detail.activities.map((a) => [a.id, a]))
+  const matrix = buildMatrixLookup(detail.matrixCells)
   const mandayOf = new Map(
     detail.mandays.map((m) => [`${m.itemId}_${m.roleId}`, m.manday]),
   )
@@ -165,37 +173,119 @@ export function buildSummary(detail: ProjectDetail) {
         }
       })
 
-    // The Developer man-days of this phase drive every phase-scoped role.
-    const devManday = round2(
-      items.reduce(
+    return {
+      id: phase.id,
+      name: phase.name,
+      items,
+      derivedByRole: new Map(),
+      devManday: 0,
+      total: 0,
+    }
+  })
+
+  const representedAnswers = new Set(
+    detail.items
+      .filter((item) => item.activityId != null)
+      .map((item) => `${item.activityId}_${item.complexity}`),
+  )
+  let nextVirtualPhaseId = -1
+  let nextVirtualItemId = -1
+
+  for (const topic of detail.survey?.topics ?? []) {
+    const activity = activityById.get(topic.activityId)
+    if (!activity) continue
+
+    for (const complexity of ['L', 'M', 'H'] as const) {
+      const answer = detail.activityQty.get(`${topic.activityId}_${complexity}`)
+      if (!answer || answer.qty <= 0) continue
+
+      const answerKey = `${topic.activityId}_${complexity}`
+      if (representedAnswers.has(answerKey)) continue
+      representedAnswers.add(answerKey)
+
+      const qty =
+        activity.countUnit === ONCE_PER_PROJECT_UNIT ? 1 : answer.qty
+      const detailText =
+        answer.detail?.trim() ||
+        defaultItemDetail(activity.name, activity.countUnit, qty)
+      const phaseName = activity.groupName ?? activity.name
+      let phase = phases.find((candidate) => candidate.name === phaseName)
+
+      if (!phase) {
+        phase = {
+          id: nextVirtualPhaseId--,
+          name: phaseName,
+          items: [],
+          derivedByRole: new Map(),
+          devManday: 0,
+          total: 0,
+        }
+        phases.push(phase)
+      }
+
+      const mandayByRole = new Map<number, number>()
+      for (const role of exportRoles) {
+        mandayByRole.set(
+          role.id,
+          role.scope === 'phase'
+            ? 0
+            : standardManday({
+                matrix,
+                activityId: activity.id,
+                role,
+                complexity,
+                qty,
+                stackMultiplier: detail.effectiveMultiplier,
+              }),
+        )
+      }
+
+      phase.items.push({
+        id: nextVirtualItemId--,
+        detail: detailText,
+        activityLabel: `${activity.code} ${activity.name}`,
+        countUnit: activity.countUnit,
+        complexity,
+        qty,
+        dueDatePlan: null,
+        deliverables: null,
+        mandayByRole,
+        total: round2(
+          [...mandayByRole.values()].reduce((sum, md) => sum + md, 0),
+        ),
+      })
+    }
+  }
+
+  for (const phase of phases) {
+    // Developer man-days of this phase drive every phase-scoped role.
+    phase.devManday = round2(
+      phase.items.reduce(
         (sum, item) =>
           sum +
           [...devRoleIds].reduce(
-            (s, id) => s + (item.mandayByRole.get(id) ?? 0),
+            (subtotal, id) => subtotal + (item.mandayByRole.get(id) ?? 0),
             0,
           ),
         0,
       ),
     )
 
-    const derivedByRole = new Map<number, number>()
     for (const role of exportRoles) {
       if (role.scope !== 'phase' || !role.ratioOfDev) continue
-      derivedByRole.set(role.id, round2(devManday * role.ratioOfDev))
+      phase.derivedByRole.set(
+        role.id,
+        round2(phase.devManday * role.ratioOfDev),
+      )
     }
 
-    const itemTotal = items.reduce((s, i) => s + i.total, 0)
-    const derivedTotal = [...derivedByRole.values()].reduce((s, v) => s + v, 0)
-
-    return {
-      id: phase.id,
-      name: phase.name,
-      items,
-      derivedByRole,
-      devManday,
-      total: round2(itemTotal + derivedTotal),
-    }
-  })
+    const itemTotal = phase.items.reduce((sum, item) => sum + item.total, 0)
+    const derivedTotal = [...phase.derivedByRole.values()].reduce(
+      (sum, manday) => sum + manday,
+      0,
+    )
+    phase.total = round2(itemTotal + derivedTotal)
+  }
 
   const devTotal = round2(phases.reduce((s, p) => s + p.devManday, 0))
 

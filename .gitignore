@@ -47,3 +47,7 @@ next-env.d.ts
 # release output
 /release/
 /logs/
+
+# superpowers
+.superpowers/
+docs/superpowers/

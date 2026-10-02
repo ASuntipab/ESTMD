@@ -52,6 +52,14 @@ export function NavBar({ user }: { user: SessionPayload }) {
             <span className="block font-medium">{user.name}</span>
             <span className="block text-muted">{user.role}</span>
           </span>
+          <a
+            href="/api/backup"
+            download
+            className="btn-ghost px-2.5 py-1.5 text-xs text-muted hover:text-foreground flex items-center gap-1 border border-line rounded"
+            title="ดาวน์โหลดไฟล์สำรองฐานข้อมูล (.db)"
+          >
+            💾 Backup DB
+          </a>
           <form action={logout}>
             <button type="submit" className="btn-ghost px-3 py-1.5 text-xs">
               ออกจากระบบ

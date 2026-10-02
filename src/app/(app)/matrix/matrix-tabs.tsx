@@ -4,6 +4,7 @@ const TABS = [
   { key: 'activities', href: '/matrix', label: 'Activity & ค่า MD' },
   { key: 'tech-stacks', href: '/matrix/tech-stacks', label: 'ตัวคูณ & ตัวปรับ' },
   { key: 'roles', href: '/matrix/roles', label: 'บทบาท & อัตรา/MD' },
+  { key: 'criteria', href: '/matrix/criteria', label: 'เกณฑ์ระดับงาน' },
 ] as const
 
 export function MatrixTabs({
@@ -15,7 +16,9 @@ export function MatrixTabs({
 }) {
   return (
     <div className="flex flex-wrap gap-1 border-b border-line">
-      {TABS.filter((t) => isAdmin || t.key === 'activities').map((tab) => (
+      {TABS.filter(
+        (t) => isAdmin || t.key === 'activities' || t.key === 'criteria',
+      ).map((tab) => (
         <Link
           key={tab.key}
           href={tab.href}
