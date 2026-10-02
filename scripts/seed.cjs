@@ -282,35 +282,27 @@ function seedUsers() {
       email: adminEmail,
       name: 'System Admin',
       role: 'admin',
-      password: process.env.ADMIN_PASSWORD,
-      fallback: 'Admin@1234',
+      password: process.env.ADMIN_PASSWORD || 'Admin@1234',
     },
-  ]
-
-  // The demo estimator exists for local development only.
-  if (!isProduction) {
-    accounts.push({
+    {
       email: 'estimator@pttdigital.com',
       name: 'Estimator',
       role: 'estimator',
-      password: undefined,
-      fallback: 'Estimate@1234',
-    })
-  }
+      password: process.env.ESTIMATOR_PASSWORD || 'Estimate@1234',
+    },
+  ]
 
   for (const account of accounts) {
-    if (findUser.get(account.email)) continue
+    const existing = findUser.get(account.email)
+    const password = account.password
 
-    let password = account.password
-    let generated = false
-    if (!password) {
-      if (isProduction) {
-        // Never fall back to a published password on a real server.
-        password = crypto.randomBytes(12).toString('base64url')
-        generated = true
-      } else {
-        password = account.fallback
-      }
+    if (existing) {
+      db.prepare('UPDATE users SET password_hash = ? WHERE email = ?').run(
+        bcrypt.hashSync(password, 10),
+        account.email,
+      )
+      console.log(`  user ${account.email} password reset to ${password}`)
+      continue
     }
 
     insertUser.run(
@@ -319,15 +311,7 @@ function seedUsers() {
       bcrypt.hashSync(password, 10),
       account.role,
     )
-
-    if (generated) {
-      console.log(
-        `  user ${account.email} created with a generated password: ${password}`,
-      )
-      console.log('  ^ copy it now and change it after the first sign-in')
-    } else {
-      console.log(`  user ${account.email} / ${password}`)
-    }
+    console.log(`  user ${account.email} created with password ${password}`)
   }
 }
 
