@@ -122,6 +122,7 @@ Sheet `Basis of Estimate` เก็บสมมติฐานที่ใช้
 | `npm run matrix:build` | สร้าง `MD_Standard_Matrix_v3.xlsx` ขึ้นใหม่จากสเปกในสคริปต์ (ใช้ครั้งเดียวตอนอัปเวอร์ชันเมทริกซ์) |
 | `npm run test:upgrade` | ทดสอบว่าการอัปเกรดฐานข้อมูล v1 → v3 ไม่ทำค่าที่ประเมินไว้หาย (22 ข้อ) |
 | `npm run typecheck` / `npm run lint` | ตรวจ type และ lint |
+| `node scripts/import-new-pass.cjs [--force]` | สร้างโครงการ New PASS (SR0000601) จาก requirement ใน Excel — รันทุกครั้งใน `start:prod` แต่ไม่ทับโครงการที่แก้ผ่านเว็บแล้ว เว้นแต่ใส่ `--force` |
 | `npx tsx scripts/verify-export.ts <projectId> [out.xlsx]` | สร้างไฟล์ export ของโครงการและพิมพ์เนื้อหาออกมาตรวจ |
 
 ## นำขึ้น server

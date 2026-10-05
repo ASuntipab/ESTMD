@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start:prod": "node scripts/migrate.cjs && node scripts/seed.cjs && npx tsx scripts/import-new-pass.ts && next start",
+    "start:prod": "node scripts/migrate.cjs && node scripts/seed.cjs && node scripts/import-new-pass.cjs && next start",
     "lint": "eslint",
     "db:seed": "node scripts/seed.cjs",
     "db:reset": "node scripts/reset-db.cjs && node scripts/migrate.cjs && node scripts/seed.cjs",
