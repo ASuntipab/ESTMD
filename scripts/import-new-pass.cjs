@@ -12,9 +12,9 @@
  * alone unless --force is given. Plain JavaScript and raw SQL like seed.cjs,
  * because the server has no TypeScript toolchain.
  *
- * Survey answers (project_activity_qty) are deliberately not written: several
- * lines share an activity and complexity, and "สร้างรายการ" would fold them
- * into one line and count them twice.
+ * The survey (step 2) is filled with each activity and complexity's total qty.
+ * Several lines can share one answer; generateItemsFromAnswers leaves lines
+ * that already add up to their answer alone, so "สร้างรายการ" keeps them.
  */
 require('./load-env.cjs')
 
@@ -35,7 +35,8 @@ const ONCE_PER_PROJECT_UNIT = 'ต่อโครงการ'
 const PROJECT = {
   code: 'SR0000601-PASS',
   name: 'โครงการ New PASS',
-  durationDays: 180,
+  // 13 months, as in the Excel's timeline sheet.
+  durationDays: 390,
   bufferPercent: 10,
   // Angular frontend + .NET Web API, both familiar to the team.
   techStack: 'ReactJS / AngularJS (ทีมคุ้นเคย)',
@@ -208,11 +209,85 @@ const multiplier = round4(modifiers.reduce((acc, m) => acc * m.multiplier, stack
 
 /* ------------------------------------------------------------- the plan */
 
-const plan = PHASES.map((phase) => ({
+/**
+ * Due Date Plan and Deliverables per line ("phase-item"), from the 13-month
+ * plan of the Excel's timeline sheet: Phase 1 month 1, requirement & design
+ * months 2-3, development months 4-9, testing months 10-11, training month
+ * 11, go-live month 12, support month 13.
+ */
+const SCHEDULE = {
+  '1-1': ['เดือนที่ 1', null],
+  '1-2': ['เดือนที่ 2–3', 'Requirement Gathering Minutes'],
+  '1-3': ['เดือนที่ 2–3', 'Requirement Gathering Minutes'],
+  '1-4': ['เดือนที่ 2–3', null],
+  '1-5': ['เดือนที่ 2–3', null],
+  '1-6': ['เดือนที่ 3', null],
+  '2-1': ['เดือนที่ 3–4', 'Source Code Skeleton, Database Schema'],
+  '2-2': ['เดือนที่ 2–3', null],
+  '2-3': ['เดือนที่ 2–3', 'Environment Dev / SIT / UAT'],
+  '2-4': ['เดือนที่ 3', 'CI/CD Pipeline'],
+  '2-5': ['เดือนที่ 2–3', 'Firewall Request (CRQ)'],
+  '3-1': ['เดือนที่ 4–5', 'หน้าจอ First List'],
+  '3-2': ['เดือนที่ 4–5', 'หน้าจอ First List Archive'],
+  '3-3': ['เดือนที่ 4–5', 'หน้าจอ Second List'],
+  '3-4': ['เดือนที่ 4–5', 'หน้าจอ DR Layout Template'],
+  '3-5': ['เดือนที่ 5–6', 'หน้าจอ Create DR'],
+  '3-6': ['เดือนที่ 5–6', 'หน้าจอ Post to SAP'],
+  '3-7': ['เดือนที่ 4–5', 'หน้าจอ DR Template'],
+  '3-8': ['เดือนที่ 5–6', 'ฟังก์ชัน DR Upload'],
+  '3-9': ['เดือนที่ 6', 'หน้าจอ XML Invoice List'],
+  '3-10': ['เดือนที่ 6', 'หน้าจอ Announcement'],
+  '3-11': ['เดือนที่ 6', 'ฟังก์ชันแนบไฟล์'],
+  '3-12': ['เดือนที่ 6', 'หน้าจอ Customer Information'],
+  '4-1': ['เดือนที่ 6–8', 'หน้าจอ Bulk Drum / AVGAS / Batch'],
+  '4-2': ['เดือนที่ 7–8', 'Approval Workflow'],
+  '4-3': ['เดือนที่ 7–8', 'E-mail Notification'],
+  '4-4': ['เดือนที่ 8', 'แบบฟอร์ม Invoice, e-DR, Price Advice, Statement'],
+  '5-1': ['เดือนที่ 6–8', 'หน้าจอ Out-Out Upload / Post'],
+  '5-2': ['เดือนที่ 7–8', 'หน้าจอ Margin Out-Out'],
+  '5-3': ['เดือนที่ 8', 'หน้าจอ Price Advice'],
+  '5-4': ['เดือนที่ 7–8', 'AI OCR Interface'],
+  '6-1': ['เดือนที่ 4–5', 'หน้าจอ Master Data 11 รายการ'],
+  '6-2': ['เดือนที่ 5', 'หน้าจอ SAP Contract Master'],
+  '6-3': ['เดือนที่ 4', 'หน้าจอ User / Business Unit'],
+  '6-4': ['เดือนที่ 4', 'Role & Permission Matrix'],
+  '6-5': ['เดือนที่ 4', 'Login AD / DB'],
+  '6-6': ['เดือนที่ 4', 'Session Policy'],
+  '6-7': ['เดือนที่ 8–9', 'Audit Log + หน้าดู Log'],
+  '6-8': ['เดือนที่ 8–9', 'หน้าจอ E-mail Log'],
+  '6-9': ['เดือนที่ 7', 'หน้าจอ E-mail Template'],
+  '6-10': ['เดือนที่ 7', 'หน้าจอ E-mail Mapping / Synchronize'],
+  '7-1': ['เดือนที่ 5–7', 'SAP Interface Spec + Connector'],
+  '7-2': ['เดือนที่ 6–7', 'SAP Interface'],
+  '7-3': ['เดือนที่ 5', 'PIS / WSO2 Interface'],
+  '7-4': ['เดือนที่ 5', 'Master Data Sync'],
+  '7-5': ['เดือนที่ 7–8', 'Thappline Interface'],
+  '7-6': ['เดือนที่ 7–9', 'Tablet API + Tablet App ที่ปรับแล้ว'],
+  '7-7': ['เดือนที่ 8–9', 'Background Job'],
+  '8-1': ['เดือนที่ 8–9', 'รายงาน 7 รายงาน'],
+  '8-2': ['เดือนที่ 8–9', 'รายงาน 18 รายงาน'],
+  '8-3': ['เดือนที่ 8', 'Export Excel / Word / PDF'],
+  '9-1': ['เดือนที่ 4–9', 'Data Migration Script + Validation Report'],
+  '9-2': ['เดือนที่ 8–9', 'Test Scenario / Test Script'],
+  '9-3': ['เดือนที่ 8–9', 'Test Scenario / Test Script'],
+  '9-4': ['เดือนที่ 10', 'SIT Result'],
+  '9-5': ['เดือนที่ 10', 'SIT Result'],
+  '9-6': ['เดือนที่ 11', null],
+  '9-7': ['เดือนที่ 11', null],
+  '9-8': ['เดือนที่ 10–11', 'Security Scan Report (ผ่าน)'],
+  '10-1': ['เดือนที่ 11', null],
+  '10-2': ['เดือนที่ 12', 'Production Environment'],
+  '10-3': ['เดือนที่ 12–13', null],
+  '10-4': ['เดือนที่ 1–13', 'Progress Report'],
+}
+
+const plan = PHASES.map((phase, p) => ({
   name: phase.name,
-  items: phase.items.map(([code, complexity, qty, detail, deliverables]) => {
+  items: phase.items.map(([code, complexity, qty, detail, deliverables], i) => {
     const activity = activityByCode.get(code)
     if (!activity) throw new Error(`activity not found: ${code}`)
+    const fill = SCHEDULE[`${p + 1}-${i + 1}`]
+    if (!fill) throw new Error(`no schedule for line ${p + 1}-${i + 1}`)
     return {
       code,
       activityId: activity.id,
@@ -220,28 +295,56 @@ const plan = PHASES.map((phase) => ({
       // A row counted once per project must not be multiplied.
       qty: activity.countUnit === ONCE_PER_PROJECT_UNIT ? 1 : qty,
       detail,
-      deliverables: deliverables ?? null,
+      dueDatePlan: fill[0],
+      deliverables: deliverables ?? fill[1],
     }
   }),
 }))
+if (plan.reduce((n, p) => n + p.items.length, 0) !== Object.keys(SCHEDULE).length) {
+  throw new Error('SCHEDULE does not match the line items')
+}
+
+/**
+ * Step 4 (ทีม & อัตรา): level by day rate (14,000 = Sr1, 8,500 = Of1) and the
+ * people named in the Excel's "Estimate Manday" sheet.
+ */
+const PEOPLE = {
+  PM: 'Nopporn (BA Lead)',
+  BA: 'Jatuporn',
+  DEV_SR: 'Suntipab',
+  DEV: 'Sarawut + Jr Dev 2 คน',
+  TESTER: 'Tester 2 คน (รอระบุชื่อ)',
+  SA: 'รอระบุชื่อ',
+  INFRA: 'Network / Database Team (OR)',
+  DEVOPS: 'รอระบุชื่อ',
+}
 
 /** What the project should hold, comparable with what it already holds. */
-const planKey = JSON.stringify(
-  plan.flatMap((p) => p.items.map((i) => [p.name, i.code, i.complexity, i.qty, i.detail])),
-)
+const planItems = plan.flatMap((p) => p.items)
+const planKey = JSON.stringify([
+  plan.flatMap((p) => p.items.map((i) => [p.name, i.code, i.complexity, i.qty, i.detail, i.dueDatePlan, i.deliverables])),
+  new Set(planItems.map((i) => `${i.activityId}:${i.complexity}`)).size,
+  Object.keys(PEOPLE).length,
+])
 
 function currentKey(projectId) {
-  return JSON.stringify(
+  const { n } = one('SELECT count(*) AS n FROM project_activity_qty WHERE project_id = ?', projectId)
+  return JSON.stringify([
     all(
-      `SELECT ph.name, a.code, i.complexity, i.qty, i.detail
+      `SELECT ph.name, a.code, i.complexity, i.qty, i.detail, i.due_date_plan, i.deliverables
          FROM project_items i
          JOIN project_phases ph ON ph.id = i.phase_id
          LEFT JOIN activities a ON a.id = i.activity_id
         WHERE i.project_id = ?
         ORDER BY ph.sort_order, i.sort_order, i.id`,
       projectId,
-    ).map((r) => [r.name, r.code, r.complexity, r.qty, r.detail]),
-  )
+    ).map((r) => [r.name, r.code, r.complexity, r.qty, r.detail, r.due_date_plan, r.deliverables]),
+    n,
+    one(
+      'SELECT count(*) AS n FROM project_roles WHERE project_id = ? AND person_name IS NOT NULL',
+      projectId,
+    ).n,
+  ])
 }
 
 function editedOnWeb(project) {
@@ -270,14 +373,28 @@ const insertPhase = db.prepare(
 )
 const insertItem = db.prepare(`
   INSERT INTO project_items
-    (project_id, phase_id, activity_id, detail, complexity, qty, deliverables, sort_order)
-  VALUES (?, ?, ?, ?, ?, ?, ?, ?)`)
+    (project_id, phase_id, activity_id, detail, complexity, qty, due_date_plan, deliverables, sort_order)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`)
 const insertManday = db.prepare(
   'INSERT INTO project_item_mandays (item_id, role_id, manday, overridden) VALUES (?, ?, ?, 0)',
 )
 const insertRole = db.prepare(`
-  INSERT INTO project_roles (project_id, role_id, rate_per_md, included, sort_order)
+  INSERT INTO project_roles
+    (project_id, role_id, resource_label, person_name, rate_per_md, included, sort_order)
+  VALUES (?, ?, ?, ?, ?, ?, ?)`)
+
+const insertAnswer = db.prepare(`
+  INSERT INTO project_activity_qty (project_id, activity_id, complexity, qty, detail)
   VALUES (?, ?, ?, ?, ?)`)
+
+const answers = new Map()
+for (const item of plan.flatMap((p) => p.items)) {
+  const key = `${item.activityId}:${item.complexity}`
+  const a = answers.get(key) ?? { ...item, qty: 0, lines: 0 }
+  a.qty += item.qty
+  a.lines += 1
+  answers.set(key, a)
+}
 
 const run = db.transaction((existing) => {
   for (const p of existing) db.prepare('DELETE FROM projects WHERE id = ?').run(p.id)
@@ -306,6 +423,7 @@ const run = db.transaction((existing) => {
         item.detail,
         item.complexity,
         item.qty,
+        item.dueDatePlan,
         item.deliverables,
         (i + 1) * 10,
       ).lastInsertRowid
@@ -318,10 +436,24 @@ const run = db.transaction((existing) => {
     })
   })
 
+  // Survey answers: one per activity and complexity, the sum of its lines.
+  // A single line carries its wording; shared answers keep the default.
+  for (const a of answers.values()) {
+    insertAnswer.run(projectId, a.activityId, a.complexity, a.qty, a.lines === 1 ? a.detail : null)
+  }
+
   // Cost only the roles this estimate actually uses.
   for (const role of roles) {
     const included = (totals.get(role.code) ?? 0) > 0 ? 1 : 0
-    insertRole.run(projectId, role.id, role.ratePerMd, included, role.sortOrder)
+    insertRole.run(
+      projectId,
+      role.id,
+      included ? (role.ratePerMd >= 14000 ? 'Sr1' : 'Of1') : null,
+      included ? PEOPLE[role.code] ?? null : null,
+      role.ratePerMd,
+      included,
+      role.sortOrder,
+    )
   }
   return { projectId, totals }
 })

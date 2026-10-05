@@ -577,12 +577,15 @@ export async function generateItemsFromAnswers(formData: FormData) {
       id: projectItems.id,
       activityId: projectItems.activityId,
       complexity: projectItems.complexity,
+      qty: projectItems.qty,
     })
     .from(projectItems)
     .where(eq(projectItems.projectId, projectId))
-  const existingByKey = new Map(
-    existingItems.map((i) => [`${i.activityId}_${i.complexity}`, i.id]),
-  )
+  const existingByKey = new Map<string, typeof existingItems>()
+  for (const i of existingItems) {
+    const key = `${i.activityId}_${i.complexity}`
+    existingByKey.set(key, [...(existingByKey.get(key) ?? []), i])
+  }
 
   let sortOrder = 0
   for (const answer of usable) {
@@ -594,10 +597,33 @@ export async function generateItemsFromAnswers(formData: FormData) {
       answer.detail?.trim() ||
       defaultItemDetail(answer.name, answer.countUnit, qty)
 
-    const existingId = existingByKey.get(key)
+    const existing = existingByKey.get(key) ?? []
+    // Several keyed lines can share one answer (one per function). When they
+    // already add up to it, the answer describes them and nothing changes;
+    // overwriting one of them with the total would count the rest twice.
+    if (existing.length > 1) {
+      const sum = existing.reduce((s, i) => s + i.qty, 0)
+      if (sum === qty) continue
+    }
+    const existingId = existing.length === 1 ? existing[0].id : undefined
     let itemId: number
 
-    if (existingId) {
+    if (existing.length > 1) {
+      // The answer changed: put the difference on the last line, keeping the
+      // others as they are.
+      const last = existing[existing.length - 1]
+      const lastQty = qty - (existing.reduce((s, i) => s + i.qty, 0) - last.qty)
+      if (lastQty <= 0) continue
+      await db
+        .update(projectItems)
+        .set({ qty: lastQty })
+        .where(eq(projectItems.id, last.id))
+      await applyStandardMandays(
+        last.id,
+        await mandaysForItem(projectId, answer.activityId, answer.complexity, lastQty),
+      )
+      continue
+    } else if (existingId) {
       await db
         .update(projectItems)
         .set({ detail, qty })
